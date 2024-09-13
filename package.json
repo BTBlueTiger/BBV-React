@@ -9,14 +9,13 @@
     "react-scripts": "^3.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
     "start:lambda": "netlify-lambda serve src/lambda",
-    "build": "run-p build:**",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "build:app": "react-scripts build",
     "build:lambda": "netlify-lambda build src/lambda",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  }
 
   "eslintConfig": {
     "extends": "react-app"
